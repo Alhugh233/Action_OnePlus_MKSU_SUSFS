@@ -310,6 +310,9 @@ jobs:
             fi
           fi
 
+          # tmpfs config
+          echo "CONFIG_TMPFS_XATTR=y" >> "$CONFIG_FILE"
+
       - name: Add BaseBand-Guard(BBG)
         run: |
           cd kernel_workspace/kernel_platform
